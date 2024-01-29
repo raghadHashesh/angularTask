@@ -1,0 +1,31 @@
+header {
+    height: 70px;
+    background-color: var(--darkblue);
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px 20px;
+}
+
+header nav .logo {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+header nav .search {
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 1.2rem;
+}
+
+header nav .search:focus {
+    outline: 0;
+}

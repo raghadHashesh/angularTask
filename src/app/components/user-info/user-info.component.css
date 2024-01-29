@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .main{
+    width:  80%;
+}
+.container .main .avatar{
+    width: 30%;
+}
+.container .main .avatar img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.container .main .info{
+    font-size: 1.5rem;
+}
+.container .main .info span{
+    color: var(--blue);
+}
+.container .main .back{
+    padding: 10px 15px;
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    color: white;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.container .main .back:hover{
+    background-color: var(--lightblue);
+    color: var(--darkblue);
+    border-color: var(--darkblue);
+}

@@ -1,0 +1,30 @@
+<div class="content">
+    <div *ngIf="!loading">
+        <div class="main" *ngIf="!isSearch">
+            <div class="users" *ngIf="(users$ | async) as users ; noUsers">
+
+                <div class="user-card" *ngFor="let user of users" routerLink="/users/{{user.id}}">
+                    <app-user-card [user]="user"></app-user-card>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isSearch && !undefinedUser" class="user-card search-card" routerLink="/users/{{searchId}}">
+            <app-user-card [user]="userSearch" class="card"></app-user-card>
+        </div>
+        <div class="undefiner-user" *ngIf="undefinedUser && isSearch">
+            <p>There is not any user with this id</p>
+        </div>
+        <ng-template #noUsers>
+            <div class="undefiner-user">
+                <p>there is not any user</p>
+            </div>
+        </ng-template>
+    </div>
+    <div class="buttons" *ngIf="!isSearch">
+        <button (click)="previouspage()" [disabled]="!page">back</button>
+        <button (click)="nextPage()" [disabled]="page">next</button>
+    </div>
+    <div class="spinner">
+        <app-spinner></app-spinner>
+    </div>
+</div>

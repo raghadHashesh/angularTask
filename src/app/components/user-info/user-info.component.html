@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="main" *ngIf="!loading">
+        <div class="user-info">
+            <div class="avatar">
+                <img [src]="userInfo.avatar" alt="">
+            </div>
+            <div class="info">
+                <div class="id">User Id : <span>{{userInfo.id}}</span></div>
+                <div class="name">First name: <span>{{userInfo.first_name}}</span></div>
+                <div class="name">Last name : <span>{{userInfo.last_name}}</span></div>
+                <div class="email">Email: <span>{{userInfo.email}}</span></div>
+            </div>
+        </div>
+        <div *ngIf="isSearch && !undefinedUser" class="user-card search-card" routerLink="/users/{{searchId}}">
+            <app-user-card [user]="userSearch"></app-user-card>
+        </div>
+        <button routerLink="/users" class="back">Back</button>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

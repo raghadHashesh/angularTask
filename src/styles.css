@@ -1,0 +1,10 @@
+:root {
+    --darkblue: #11009E;
+    --blue: #4942E4;
+    --lightblue: #8696FE;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
